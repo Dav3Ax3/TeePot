@@ -16,14 +16,24 @@
 
 var a = function(x){return x*x};
 
-var b =((x) => {x*x*x});
+let b = (x => x*x*x);
 
-var c = x =>  {x^4};
+let c = x => x**4;
 
-var ispis = (x) => console.log(x);
+var ispis = x => console.log(x);
 
 var x = 2;
 
-ispis(a(x));
-ispis(b(x));
-ispis(c(x));
+ispis("A:" + a(x));
+ispis("B:" + b(x));
+ispis("C:" + c(x));
+
+var f1 = (function () {
+    let x = 3;
+    return x*x*x;
+}());
+
+var f2 = (x => x*x*x)(6);
+
+ispis(f1);
+ispis(f2);

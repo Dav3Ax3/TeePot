@@ -17,7 +17,7 @@ function fibit(n){
     var predposlednji = 1, poslednji = 1, tmp;
     if(n == 0  || n ==1) return 1;
 
-    var iter = 1;
+    let iter = 1;
     while(iter != n){
         tmp = poslednji;
         poslednji = predposlednji + poslednji
